@@ -5,7 +5,7 @@ var cors = require('cors');
 
 var app = express();
 
-
+// Access secret files from local storage
 var secret;
 try {
   secret = require(path.join(__dirname, './../secret.json'));
@@ -13,21 +13,17 @@ try {
   secret = {};
 }
 
+// If no environmental variable access google maps api key
 var GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY || secret.GOOGLE_MAPS_API_KEY;
-
-console.log(GOOGLE_MAPS_API_KEY)
-
 var geocoder = require('./geocoder')(GOOGLE_MAPS_API_KEY);
-var location = geocoder.geocode('Coombe Road, New Malden, KT3 4PX');
-location.then(function(response){
-  console.log(response);
-})
 
 var static_path = path.join(__dirname, './../build');
 
 app.enable('trust proxy');
 
 app.use(compression());
+
+app.use('/api/communities', require('./communities')(geocoder));
 
 app.options('/api/currentTime', cors());
 app.get('/api/currentTime', cors(), function(req, res) {
@@ -41,6 +37,7 @@ app.route('/').get(function(req, res) {
     });
 });
 
+
 function nocache(req, res, next) {
   res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
   res.header('Expires', '-1');
@@ -53,10 +50,6 @@ app.use('/', express.static(static_path, {
 }));
 
 var server = app.listen(process.env.PORT || 5000, function () {
-
-  var host = server.address().address;
   var port = server.address().port;
-
-  console.log('Example app listening at http://%s:%s', host, port);
-
+  console.log(`Example app listening at http://localhost:${port}`);
 });

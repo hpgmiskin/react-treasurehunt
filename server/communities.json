@@ -1,0 +1,89 @@
+[
+  {
+    "name": "Test Community",
+    "locations": [
+      {
+        "name": "House",
+        "latitude": 51.451946, 
+        "longitude": -0.196637,
+        "address": "Longstaff Road",
+        "clues": ["You should know where your own house is"],
+        "detail": "This is the place where you live"
+      },
+      {
+        "name": "Garden",
+        "latitude": 51.452075,
+        "longitude": -0.196179,
+        "address": "Longstaff Road",
+        "clues": ["Look outside your house where the grass is"],
+        "detail": "The garden is the outside area of your house"
+      }
+    ]
+  },
+  {
+    "name": "Koreans",
+    "locations": [
+      {
+        "name": "New Malden Train Station",
+        "address": "Coombe Road, New Malden, KT3 4PX",
+        "clues": ["The gateway to New Malden and for the Koreans living in the UK","The place where you’d go to travel to by public transport to London","New Malden Train station"],
+        "detail": "South Koreans came to Britain in the form of Business Immigrants, after large Korean businesses like Samsung set up their European headquarters in New Malden. With the South Korean embassy originally being located here, this has created a hub for more Korean students and Koreans working in finance and technology industries. North Koreans have come as political refugees and live around the South Koreans due to their linguistic and cultural similarities."
+      },
+      {
+        "name": "K Mart (Korean Supermarket)",
+        "address": "71-73 High St, New Malden KT3 4BT",
+        "clues": ["One-stop shop for all your K-needs","Mart to buy Koreans goods","Korean Supermarket on High Street"],
+        "detail": "“We have the same culture… same food, same rice” \n Whilst North and South Koreans living in the UK have some ongoing prejudices in relationship to one another, the two groups are far more willing to cooperate and live as one community than their domestic compatriots. They acknowledge their shared culture, food and language and try to build upon this."
+      },
+      {
+        "name": "Han Karaoke Bar",
+        "address": "Apex House, 1 High St, New Malden KT3 4DQ",
+        "clues": ["Where can you eat, drink and sing loudly all in the same place?","Korean karaoke bar and restaurant","Han Karaoke Bar"],
+        "detail": "Many North and South Koreans like a party. Eumjugamu means drinking, music and dancing and Koreans take this seriously. Karaoke can play a large part of evening entertainment coupled with much drinking of beer and rice or potato based spirits. This practice relates to much older traditions and is deeply engrained in their culture."
+      },
+      {
+        "name": "Calvary Korean Church",
+        "address": "132 Kingston Rd, New Malden KT3 3ND",
+        "clues": ["The place where Jesus meets Korea","Korean church"],
+        "detail": "Koreans can struggle to understand the way British society works and are characterised as being an isolated community. Churches, schools, health centres and politics all in very different ways that even Koreans who have lived in the UK for 10 or more years are still confused by. Furthermore, Koreans can struggle with spoken English, as English education in Korea focuses far more on written elements. With these differences in mind, Koreans can often feel like they don’t wish to both others, and can prefer to set up their own social organisations."
+      },
+      {
+        "name": "Hapkido School of Korean Martial Arts",
+        "address": "240 Kingston Rd, New Malden KT3 3RN",
+        "clues": ["Where Korean’s send their children to get active and learn discipline  ","Korean martial arts school","Where you can learn Hapkido martial arts"],
+        "detail": "South Koreans place a lot of importance upon discipline. This plays a large part in the educational attainment of their children, which parents value greatly. They make large time and financial sacrifices to ensure that they are able to go to the best schools and universities, enabling them to obtain careers deemed respectable."
+      }
+    ]
+  },
+  {
+    "name": "Historic Kingston",
+    "locations": [
+      {
+        "name": "Market House",
+        "address": "Market House, Kingston upon Thames, Greater London KT1 1JS",
+        "clues": ["Old prime shopping centre","The house of markets","3: "],
+        "detail": "Kingston was established as a an Anglo-Saxon royal estate some time before the early 9th century. It grew to increased prominence as market town. With rivers being the most effective way of transporting goods, it was placed to established strong trading links with London. At its peak in the middle ages Kingston had three annual fairs, attracting buyers and sellers from far and wide."
+      },
+      {
+        "name": "Coronation Stone",
+        "address": "High St, Kingston upon Thames, Greater London KT1 1EU",
+        "clues": ["The King’s stone","The place where kings were made kings","The coronation stone"],
+        "detail": "After King Athelstan united the Kingdom of England Kingston became the place where kings were coronated in the 10th century. There were 8 coronations of English kings between the years of 902  and 979. They mark the last of the Anglo-Saxon dynasties, with two Viking and one Norman invasion following."
+      },
+      {
+        "name": "Kingston Bridge",
+        "address": "Kingston Bridge, Kingston upon Thames, Greater London KT1",
+        "clues": ["Structure over water","The place you would go to cross The Thames","Kingston Bridge"],
+        "detail": "Kingston Bridge has existed in many forms since the 13th century, being destroyed and rebuilt repeatedly. It was a great strategic location being one of the main crossing points before London and contributed to the success of Kingston’s markets. Was built in its current form in 1828 after the previous bridge was destroyed by frost damage. "
+      },
+      {
+        "name": "Hampton Court Palace, Bushy Park  ",
+        "address": "Hampton Court Palace, East Molesey, Surrey KT8 9AU",
+        "clues": ["Home of the royals","A Tudor Palace close to Kingston","Hampton Court Palace"],
+        "detail": "Hampton Court was built in 1520 by Cardinal Wolsey before later being seized by Henry VIII. Monarchs resided in the palace up until George II died in 1727. The palace has served Kingston well. During its earlier years it provided a huge boost to the markets and then since Queen Victoria’s reign when it was opened to the public and has come to be a big tourist attraction for those wishing to learn about Tudor times and monarchs. "
+      }
+    ]
+  }
+]
+
+
