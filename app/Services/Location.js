@@ -1,7 +1,16 @@
 class LocationService {
 
   position(callback){
+    console.log('position called')
     navigator.geolocation.getCurrentPosition((position) => {
+      console.log('position found',position.coords)
+      callback(position.coords);
+    })
+  }
+
+  watch(callback){
+    console.log('watch called')
+    navigator.geolocation.watchPosition((position) => {
       callback(position.coords);
     })
   }

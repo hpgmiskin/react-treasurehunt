@@ -16,6 +16,7 @@
   "author": "Chris Greening",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.12.0",
     "compression": "^1.5.0",
     "cors": "^2.7.1",
     "express": "^4.12.4",

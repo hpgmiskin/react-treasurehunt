@@ -5,10 +5,10 @@ import Community from './Community';
 
 class Content extends React.Component {
 
+        // <Location></Location>
   render() {
     return (
       <div>
-        <Location></Location>
         <Community></Community>
       </div>
   	)
