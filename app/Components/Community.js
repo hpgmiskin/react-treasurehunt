@@ -15,7 +15,7 @@ class Community extends React.Component {
   }
 
   fetchData(){
-    axios.get('/api/communities/0')
+    axios.get(window.location.href + 'api/communities/0')
       .then((response) => {
         this.setState({
           community: response.data
