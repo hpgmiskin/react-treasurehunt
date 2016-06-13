@@ -5,6 +5,24 @@ var cors = require('cors');
 
 var app = express();
 
+
+var secret;
+try {
+  secret = require(path.join(__dirname, './../secret.json'));
+} catch(error) {
+  secret = {};
+}
+
+var GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY || secret.GOOGLE_MAPS_API_KEY;
+
+console.log(GOOGLE_MAPS_API_KEY)
+
+var geocoder = require('./geocoder')(GOOGLE_MAPS_API_KEY);
+var location = geocoder.geocode('Coombe Road, New Malden, KT3 4PX');
+location.then(function(response){
+  console.log(response);
+})
+
 var static_path = path.join(__dirname, './../build');
 
 app.enable('trust proxy');
