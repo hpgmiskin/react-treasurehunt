@@ -1,9 +1,12 @@
 import React from 'react';
 
+import LocationService from '../Services/Location';
+
 class Location extends React.Component {
 
   constructor(){
     super()
+    this.location = new LocationService();
     this.state = {
       position: null
     }
@@ -11,8 +14,11 @@ class Location extends React.Component {
 
   componentDidMount(){
     if (navigator.geolocation){
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.setState({ position: position.coords });
+      // navigator.geolocation.getCurrentPosition((position) => {
+      //   this.setState({ position: position.coords });
+      // })
+      this.location.position((position) => {
+        this.setState({ position: position });
       })
     }
   }

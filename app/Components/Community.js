@@ -1,9 +1,12 @@
 import React from 'react';
 
+import LocationService from '../Services/Location';
+
 class Community extends React.Component {
 
   constructor(){
     super()
+    this.location = new LocationService();
     this.state = {
       community: null
     }
@@ -50,6 +53,17 @@ class Community extends React.Component {
               </div>
             ))
           }
+        <h3>
+          Distance is 
+          {
+            this.location.distance(
+              community.locations[0].latitude,
+              community.locations[0].longitude,
+              community.locations[1].latitude,
+              community.locations[1].longitude
+            )
+          }
+        </h3>
       </div>
     )
   }
