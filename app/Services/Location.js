@@ -9,10 +9,12 @@ class LocationService {
   }
 
   watch(callback){
-    console.log('watch called')
-    navigator.geolocation.watchPosition((position) => {
+    navigator.geolocation.getCurrentPosition((position) => {
       callback(position.coords);
     })
+    navigator.geolocation.watchPosition((position) => {
+      callback(position.coords);
+    })  
   }
 
   distance(lat1, lon1, lat2, lon2) {

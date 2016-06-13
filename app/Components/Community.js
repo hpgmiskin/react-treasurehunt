@@ -24,17 +24,11 @@ class Community extends React.Component {
   }
 
   watchLocation(){
-    console.log('watchLocation')
-    let updatePosition = (position) => {
+    this.location.watch((position) => {
       this.setState({
         position: position
-      })
-    };
-    this.location.position((position) => {
-      console.log('updating state')
-      updatePosition(position);
-      this.location.watch(updatePosition);
-    })
+      });
+    });
   }
 
   componentDidMount(){
@@ -92,17 +86,6 @@ class Community extends React.Component {
               </div>
             ))
           }
-        <h3>
-          Distance is 
-          {
-            this.location.distance(
-              community.locations[0].latitude,
-              community.locations[0].longitude,
-              community.locations[1].latitude,
-              community.locations[1].longitude
-            )
-          }
-        </h3>
       </div>
     )
   }

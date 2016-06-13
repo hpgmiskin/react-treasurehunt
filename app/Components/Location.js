@@ -12,15 +12,16 @@ class Location extends React.Component {
     }
   }
 
+  watchLocation(){
+    this.location.watch((position) => {
+      this.setState({
+        position: position
+      });
+    });
+  }
+
   componentDidMount(){
-    if (navigator.geolocation){
-      // navigator.geolocation.getCurrentPosition((position) => {
-      //   this.setState({ position: position.coords });
-      // })
-      this.location.position((position) => {
-        this.setState({ position: position });
-      })
-    }
+    this.watchLocation()
   }
 
   render(){
