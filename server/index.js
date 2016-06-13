@@ -23,9 +23,9 @@ app.enable('trust proxy');
 
 app.use(compression());
 
-app.use('/api/communities', require('./communities')(geocoder));
+app.options('/api/*', cors());
+app.use('/api/communities', cors(), require('./communities')(geocoder));
 
-app.options('/api/currentTime', cors());
 app.get('/api/currentTime', cors(), function(req, res) {
   res.send({ time: new Date() });
 });
