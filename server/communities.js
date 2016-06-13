@@ -3,7 +3,6 @@ var router = express.Router();
 
 var communities = require('./communities.json');
 
-
 module.exports = function(geocoder){
 
   communities.map(function(community){
@@ -18,12 +17,17 @@ module.exports = function(geocoder){
           }
         });
       };
-      
+
     })
   })
 
   router.get('/',function(req,res){
     res.json(communities);
+  })
+
+  router.get('/:id',function(req,res){
+    var id = req.params.id;
+    res.json(communities[id]);
   })
 
   return router;
