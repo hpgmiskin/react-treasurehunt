@@ -1,6 +1,10 @@
 import React from 'react';
 import $ from 'jquery';
 
+import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
+import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
 import LocationService from '../Services/Location';
 
 class Community extends React.Component {
@@ -14,8 +18,12 @@ class Community extends React.Component {
     }
   }
 
+  getChildContext() {
+    return { muiTheme: getMuiTheme(baseTheme) };
+  }
+
   fetchData(){
-    $.get('/api/communities/0',(response) => {
+    $.get('/api/communities/1',(response) => {
       this.setState({
         community: response
       });
@@ -64,25 +72,34 @@ class Community extends React.Component {
       <div>
         <h1>{community.name}</h1>
           {
-            community.locations.map((location) => (
-              <div>
-                <h2>
-                  {location.name}
-                  <small> - {location.latitude} {location.longitude}</small>
-                </h2>
+            community.locations.map((location,locationKey) => (
+              <Card key={locationKey}>
+                <CardHeader
+                  title={location.name}
+                  actAsExpander={true}
+                  initiallyExpanded={true}
+                  showExpandableButton={true}
+                />
                 {
-                  position ?
-                  <h4>You are { this.findDistance(location.latitude, location.longitude) }m away</h4> :
-                  <h4>No Position</h4>
+                  location.clues.map((clue,clueKey) => (
+                    <CardText key={clueKey} expandable={true}>
+                      {clue}
+                    </CardText>
+                  ))
                 }
-                <ul>
-                  {
-                    location.clues.map((clue) => (
-                      <li>{clue}</li>
-                    ))
-                  }
-                </ul>
-              </div>
+                
+                {
+                  position ? (
+                    <CardText expandable={true}>
+                      You are { this.findDistance(location.latitude, location.longitude) }m away
+                    </CardText>
+                  ) : (
+                    <CardText expandable={true}>
+                      No Position
+                    </CardText>
+                  )
+                }
+              </Card>
             ))
           }
       </div>
@@ -98,5 +115,9 @@ class Community extends React.Component {
   }
 
 }
+
+Community.childContextTypes = {
+    muiTheme: React.PropTypes.object.isRequired,
+};
 
 module.exports = Community;
