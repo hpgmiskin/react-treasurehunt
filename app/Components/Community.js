@@ -1,5 +1,5 @@
 import React from 'react';
-import axios  from 'axios';
+import $ from 'jquery';
 
 import LocationService from '../Services/Location';
 
@@ -15,12 +15,11 @@ class Community extends React.Component {
   }
 
   fetchData(){
-    axios.get('api/communities/0')
-      .then((response) => {
-        this.setState({
-          community: response.data
-        });
-      })
+    $.get('/api/communities/0',(response) => {
+      this.setState({
+        community: response
+      });
+    })
   }
 
   watchLocation(){
