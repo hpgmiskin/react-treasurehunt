@@ -65,6 +65,11 @@ class Community extends React.Component {
     return Math.round(distance);
   }
 
+  displayDistance(location){
+    let distance = this.findDistance(location.latitude, location.longitude);
+    return `${distance}m away`
+  }
+
   renderCommunity(){
     let position = this.state.position;
     let community = this.state.community;
@@ -76,9 +81,7 @@ class Community extends React.Component {
               <Card key={locationKey}>
                 <CardHeader
                   title={location.name}
-                  actAsExpander={true}
-                  initiallyExpanded={true}
-                  showExpandableButton={true}
+                  subtitle={this.displayDistance(location)}
                 />
                 {
                   location.clues.map((clue,clueKey) => (
@@ -86,18 +89,6 @@ class Community extends React.Component {
                       {clue}
                     </CardText>
                   ))
-                }
-                
-                {
-                  position ? (
-                    <CardText expandable={true}>
-                      You are { this.findDistance(location.latitude, location.longitude) }m away
-                    </CardText>
-                  ) : (
-                    <CardText expandable={true}>
-                      No Position
-                    </CardText>
-                  )
                 }
               </Card>
             ))
