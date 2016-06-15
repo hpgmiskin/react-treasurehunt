@@ -10,6 +10,7 @@ class Content extends React.Component {
     return (
       <div>
         <Community/>
+        <div style={{ padding: 20 }}></div>
         <Photograph/>
       </div>
   	)
