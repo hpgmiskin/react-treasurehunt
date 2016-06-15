@@ -23,7 +23,7 @@ class Community extends React.Component {
   }
 
   fetchData(){
-    $.get('/api/communities/1',(response) => {
+    $.get('/api/communities/0',(response) => {
       this.setState({
         community: response
       });

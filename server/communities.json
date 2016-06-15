@@ -17,7 +17,16 @@
         "address": "Longstaff Road",
         "clues": ["Look outside your house where the grass is"],
         "detail": "The garden is the outside area of your house"
+      },
+      {
+        "name": "Dav Location",
+        "latitude": 51.520958110592545,
+        "longitude": -0.07478401809931,
+        "address": "",
+        "clues": [],
+        "detail": ""
       }
+
     ]
   },
   {
