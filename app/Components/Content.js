@@ -2,6 +2,7 @@ import React from 'react';
 
 import Location from './Location';
 import Community from './Community';
+import Photograph from './Photograph';
 
 class Content extends React.Component {
 
@@ -9,6 +10,7 @@ class Content extends React.Component {
     return (
       <div>
         <Community/>
+        <Photograph/>
       </div>
   	)
   }

@@ -24,7 +24,8 @@
     "material-ui": "^0.15.0",
     "node-geocoder": "^3.11.0",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.1.0",
+    "react-webcam": "0.0.12"
   },
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",
