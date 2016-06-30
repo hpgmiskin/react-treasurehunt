@@ -4,7 +4,7 @@
   "description": "Bare bones webpack project with a node express server",
   "main": "server/index.js",
   "scripts": {
-    "dev": "nodemon server/index.js --watch server & webpack-dev-server --config ./webpack-dev.config.js --hot --progress --colors --content-base build",
+    "dev": "open http://localhost:8080; nodemon server/index.js --watch server & webpack-dev-server --config ./webpack-dev.config.js --hot --progress --colors --content-base build",
     "build": "rm -r dist/*; cp Procfile dist/; cp -r server dist/; webpack --config ./webpack-prod.config.js --progress --colors",
     "server": "node server/index.js",
     "test": "karma start",
