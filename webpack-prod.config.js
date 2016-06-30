@@ -18,7 +18,7 @@ module.exports = {
   './app/main.js'
   ],
   output: {
-    path: './build',
+    path: './dist/client',
     filename: 'bundle.[hash].js'
   },
   devtool:'source-map',
