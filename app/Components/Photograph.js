@@ -1,13 +1,11 @@
 import React from 'react';
 
-import Webcam from 'react-webcam';
-
 class Photograph extends React.Component {
 
   render() {
     return (
       <div>
-        <Webcam width="100%"/>
+        <input type="file" accept="image/*"></input>
       </div>
     )
   }
