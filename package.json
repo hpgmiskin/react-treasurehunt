@@ -5,7 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "dev": "open http://localhost:8080; nodemon server/index.js --watch server & webpack-dev-server --config ./webpack-dev.config.js --hot --progress --colors --content-base build",
-    "build": "rm -r dist/*; cp Procfile dist/; cp -r server dist/; webpack --config ./webpack-prod.config.js --progress --colors",
+    "build": "rm -r dist/*; cp Procfile dist/; cp package.json dist/; cp -r server dist/; webpack --config ./webpack-prod.config.js --progress --colors",
     "server": "node server/index.js",
     "test": "karma start",
     "testing": "karma start --single-run=false"

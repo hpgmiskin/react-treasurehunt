@@ -75,7 +75,7 @@ class Community extends React.Component {
     let community = this.state.community;
     return (
       <div>
-        <h1>HELLO {community.name}</h1>
+        <h1>{community.name}</h1>
           {
             community.locations.map((location,locationKey) => (
               <Card key={locationKey}>
